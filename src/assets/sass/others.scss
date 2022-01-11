@@ -1,0 +1,62 @@
+.party-buttons i {
+  padding: .5rem;
+}
+
+.added-h2 {
+  display: block;
+  width: 100%;
+}
+
+.add-event-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.form-group-date {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+.form-group label {
+  display: block;
+  padding:.5rem 1rem;
+  color: #000;
+  font-size: 3rem;
+}
+
+.callendar-input {
+  display: none;
+}
+
+#calendar
+{
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+}
+
+.font-white
+{
+  color:white;
+}
+
+.font-red
+{
+  color:red;
+}
+.font-yellow
+{
+  color: #e2e225;
+}
+
+textarea
+{
+  resize: none;
+}
+
+
+
+
