@@ -1,0 +1,42 @@
+@import '../../scss/variables.scss';
+
+.alert {
+  padding: 0.8rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: $alert-light;
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+
+  &--primary {
+    background: $alert-primary;
+    color: #fff;
+  }
+
+  &--light {
+    background: $alert-light;
+    color: #333;
+  }
+
+  &--dark {
+    background: $alert-dark;
+    color: #fff;
+  }
+
+  &--danger {
+    background: $alert-danger;
+    color: #fff;
+  }
+
+  &--success {
+    background: $alert-success;
+    color: #fff;
+  }
+
+  &--white {
+    background: #fff;
+    color: #333;
+    border: #ccc solid 1px;
+  }
+}

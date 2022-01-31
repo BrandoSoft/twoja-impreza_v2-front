@@ -22,13 +22,11 @@ function App() {
         <div className="container">
             <Navbar/>
             <Logo/>
-
             <Routes>
                 <Route path='/events/add' element={<AddEvent/>}/>
                 <Route path='/' element={<LeftForm/>}/>
                 <Route path='/user/account' element={<Account/>}/>
             </Routes>
-
             <Footer/>
         </div>
         </Router>

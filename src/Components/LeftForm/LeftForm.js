@@ -52,18 +52,18 @@ const LeftForm = () => {
                 </div>
 
 
-                <p class="form-home__description">Kategorie Typ:</p>
-                <div class="form-home__checboxcontainer">
+                <p className="form-home__description">Kategorie Typ:</p>
+                <div className="form-home__checboxcontainer">
 
-                    <div class="form-home__checkbox-category">
-                        <input type="checkbox" class="form-home__checkbox" id="checkbox-{{this}}" name="{{this}}"/>
-                        <label class="form-home__label" for="checkbox-{{this}}">asdasd</label>
+                    <div className="form-home__checkbox-category">
+                        <input type="checkbox" className="form-home__checkbox" id="checkbox-{{this}}" name="{{this}}"/>
+                        <label className="form-home__label" htmlFor="checkbox-{{this}}">asdasd</label>
                     </div>
 
                 </div>
 
 
-                <button class="form-home__submit" type="submit">Wyślij</button>
+                <button className="form-home__submit" type="submit">Wyślij</button>
             </form>
         </aside>
         </main>
