@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import axios from "axios";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
 import { FaAt, FaKey, FaUser } from "react-icons/fa";
 import './Account.scss';
 import { setAlert } from "../../actions/alert";
+import {register} from "../../actions/auth";
 import Alert from "../Alert/Alert";
 
-const RegisterForm = (props) => {
+const RegisterForm = ({setAlert, register}) => {
     const api = process.env.REACT_APP_API
 
     const [registerData, setRegisterData] = useState({
@@ -24,25 +24,9 @@ const RegisterForm = (props) => {
     const onSubmit = async e => {
         e.preventDefault();
         if (password !== password2) {
-            props.setAlert(' Hasła nie pasują do siebie', 'danger')
+            setAlert(' Hasła nie pasują do siebie', 'danger')
         } else {
-            const newUser = {
-                name, email, password
-            }
-            try {
-                const config = {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                }
-                const body = JSON.stringify(newUser)
-
-                const res = await axios.post(`${api}/api/users`, body, config);
-                console.log(res)
-
-            } catch (err) {
-                console.log(err.message)
-            }
+           register({name, email, password})
         }
     }
 
@@ -111,6 +95,7 @@ const RegisterForm = (props) => {
 
 RegisterForm.propTypes = {
     setAlert: PropTypes.func.isRequired,
+    register: PropTypes.func.isRequired,
 }
 
-export default connect(null, { setAlert })(RegisterForm);
+export default connect(null, { setAlert, register })(RegisterForm);
